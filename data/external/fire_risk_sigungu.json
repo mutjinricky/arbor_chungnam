@@ -1,0 +1,218 @@
+{
+  "_summary": "충남 15개 시군",
+  "fetched_at": "2026-05-23T11:26:51.092Z",
+  "source": "산림청_국립산림과학원 산불위험예보정보 V2",
+  "api_url": "https://apis.data.go.kr/1400377/forestPointV2/forestPointListSigunguSearchV2",
+  "by_sigun": {
+    "천안시": {
+      "sigun": "천안시",
+      "regioncode": 44130,
+      "meanavg": 41,
+      "mini": 6,
+      "maxi": 56,
+      "grade_dist": {
+        "낮음": 92,
+        "다소높음": 8,
+        "높음": 0,
+        "매우높음": 0
+      },
+      "analdate": "2026-05-23 19"
+    },
+    "공주시": {
+      "sigun": "공주시",
+      "regioncode": 44150,
+      "meanavg": 29,
+      "mini": 5,
+      "maxi": 61,
+      "grade_dist": {
+        "낮음": 99,
+        "다소높음": 1,
+        "높음": 0,
+        "매우높음": 0
+      },
+      "analdate": "2026-05-23 19"
+    },
+    "보령시": {
+      "sigun": "보령시",
+      "regioncode": 44180,
+      "meanavg": 32,
+      "mini": 6,
+      "maxi": 49,
+      "grade_dist": {
+        "낮음": 100,
+        "다소높음": 0,
+        "높음": 0,
+        "매우높음": 0
+      },
+      "analdate": "2026-05-23 19"
+    },
+    "아산시": {
+      "sigun": "아산시",
+      "regioncode": 44200,
+      "meanavg": 40,
+      "mini": 8,
+      "maxi": 55,
+      "grade_dist": {
+        "낮음": 98,
+        "다소높음": 2,
+        "높음": 0,
+        "매우높음": 0
+      },
+      "analdate": "2026-05-23 19"
+    },
+    "서산시": {
+      "sigun": "서산시",
+      "regioncode": 44210,
+      "meanavg": 31,
+      "mini": 6,
+      "maxi": 43,
+      "grade_dist": {
+        "낮음": 100,
+        "다소높음": 0,
+        "높음": 0,
+        "매우높음": 0
+      },
+      "analdate": "2026-05-23 19"
+    },
+    "논산시": {
+      "sigun": "논산시",
+      "regioncode": 44230,
+      "meanavg": 45,
+      "mini": 6,
+      "maxi": 61,
+      "grade_dist": {
+        "낮음": 78,
+        "다소높음": 22,
+        "높음": 0,
+        "매우높음": 0
+      },
+      "analdate": "2026-05-23 19"
+    },
+    "계룡시": {
+      "sigun": "계룡시",
+      "regioncode": 44250,
+      "meanavg": 38,
+      "mini": 9,
+      "maxi": 56,
+      "grade_dist": {
+        "낮음": 99,
+        "다소높음": 1,
+        "높음": 0,
+        "매우높음": 0
+      },
+      "analdate": "2026-05-23 19"
+    },
+    "당진시": {
+      "sigun": "당진시",
+      "regioncode": 44270,
+      "meanavg": 30,
+      "mini": 8,
+      "maxi": 43,
+      "grade_dist": {
+        "낮음": 100,
+        "다소높음": 0,
+        "높음": 0,
+        "매우높음": 0
+      },
+      "analdate": "2026-05-23 19"
+    },
+    "금산군": {
+      "sigun": "금산군",
+      "regioncode": 44710,
+      "meanavg": 40,
+      "mini": 6,
+      "maxi": 68,
+      "grade_dist": {
+        "낮음": 81,
+        "다소높음": 19,
+        "높음": 0,
+        "매우높음": 0
+      },
+      "analdate": "2026-05-23 19"
+    },
+    "부여군": {
+      "sigun": "부여군",
+      "regioncode": 44760,
+      "meanavg": 30,
+      "mini": 8,
+      "maxi": 49,
+      "grade_dist": {
+        "낮음": 100,
+        "다소높음": 0,
+        "높음": 0,
+        "매우높음": 0
+      },
+      "analdate": "2026-05-23 19"
+    },
+    "서천군": {
+      "sigun": "서천군",
+      "regioncode": 44770,
+      "meanavg": 36,
+      "mini": 8,
+      "maxi": 49,
+      "grade_dist": {
+        "낮음": 100,
+        "다소높음": 0,
+        "높음": 0,
+        "매우높음": 0
+      },
+      "analdate": "2026-05-23 19"
+    },
+    "청양군": {
+      "sigun": "청양군",
+      "regioncode": 44790,
+      "meanavg": 29,
+      "mini": 8,
+      "maxi": 44,
+      "grade_dist": {
+        "낮음": 100,
+        "다소높음": 0,
+        "높음": 0,
+        "매우높음": 0
+      },
+      "analdate": "2026-05-23 19"
+    },
+    "홍성군": {
+      "sigun": "홍성군",
+      "regioncode": 44800,
+      "meanavg": 31,
+      "mini": 9,
+      "maxi": 44,
+      "grade_dist": {
+        "낮음": 100,
+        "다소높음": 0,
+        "높음": 0,
+        "매우높음": 0
+      },
+      "analdate": "2026-05-23 19"
+    },
+    "예산군": {
+      "sigun": "예산군",
+      "regioncode": 44810,
+      "meanavg": 34,
+      "mini": 8,
+      "maxi": 50,
+      "grade_dist": {
+        "낮음": 100,
+        "다소높음": 0,
+        "높음": 0,
+        "매우높음": 0
+      },
+      "analdate": "2026-05-23 19"
+    },
+    "태안군": {
+      "sigun": "태안군",
+      "regioncode": 44825,
+      "meanavg": 30,
+      "mini": 13,
+      "maxi": 37,
+      "grade_dist": {
+        "낮음": 100,
+        "다소높음": 0,
+        "높음": 0,
+        "매우높음": 0
+      },
+      "analdate": "2026-05-23 19"
+    }
+  }
+}

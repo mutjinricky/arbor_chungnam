@@ -1,0 +1,179 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Pretendard', 'Noto Sans KR', system-ui, sans-serif;
+  font-size: 11pt;
+  line-height: 1.65;
+  color: #1a202c;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+h1 {
+  font-size: 22pt;
+  color: #1d4d2f;
+  border-bottom: 3px solid #1d4d2f;
+  padding-bottom: 8px;
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 15pt;
+  color: #1d4d2f;
+  margin-top: 28px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-left: 4px solid #3f7f54;
+  font-weight: 700;
+  page-break-after: avoid;
+}
+
+h3 {
+  font-size: 12pt;
+  color: #2d5a3f;
+  margin-top: 18px;
+  margin-bottom: 8px;
+  font-weight: 700;
+  page-break-after: avoid;
+}
+
+p {
+  margin: 8px 0;
+}
+
+blockquote {
+  background: #f0f7f2;
+  border-left: 4px solid #3f7f54;
+  padding: 10px 16px;
+  margin: 14px 0;
+  border-radius: 0 6px 6px 0;
+  font-size: 10.5pt;
+  color: #2d3748;
+}
+
+blockquote strong {
+  color: #1d4d2f;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 12px 0;
+  font-size: 10pt;
+  page-break-inside: avoid;
+}
+
+table th {
+  background: #f0f7f2;
+  color: #1d4d2f;
+  padding: 8px 10px;
+  text-align: left;
+  border-bottom: 2px solid #3f7f54;
+  font-weight: 700;
+}
+
+table td {
+  padding: 6px 10px;
+  border-bottom: 1px solid #e2e8f0;
+  vertical-align: top;
+}
+
+table tr:nth-child(even) td {
+  background: #fafbfc;
+}
+
+code {
+  background: #f1f5f9;
+  padding: 1px 6px;
+  border-radius: 3px;
+  font-size: 9.5pt;
+  font-family: 'D2Coding', 'Consolas', 'Monaco', monospace;
+  color: #1e3a5f;
+}
+
+pre {
+  background: #1a202c;
+  color: #e2e8f0;
+  padding: 12px 14px;
+  border-radius: 6px;
+  font-size: 9pt;
+  line-height: 1.5;
+  overflow-x: auto;
+  page-break-inside: avoid;
+}
+
+pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  font-size: 9pt;
+}
+
+ul, ol {
+  padding-left: 22px;
+  margin: 8px 0;
+}
+
+li {
+  margin: 3px 0;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #cbd5e0;
+  margin: 24px 0;
+}
+
+strong {
+  color: #1a202c;
+  font-weight: 700;
+}
+
+a {
+  color: #2d5a3f;
+  text-decoration: none;
+  border-bottom: 1px dotted #3f7f54;
+}
+
+em {
+  color: #475569;
+  font-style: italic;
+  font-size: 10pt;
+}
+
+/* 첫 페이지 헤더 강조 */
+h1 + blockquote {
+  background: #1d4d2f;
+  color: white;
+  font-size: 12pt;
+  padding: 14px 20px;
+  border-left: none;
+  border-radius: 8px;
+  margin: 8px 0 20px;
+}
+
+h1 + blockquote strong {
+  color: #ffd166;
+}
+
+/* 인쇄 시 페이지 분리 */
+@media print {
+  h2 { page-break-before: auto; }
+  h2:first-of-type { page-break-before: avoid; }
+  table, pre, blockquote { page-break-inside: avoid; }
+}
+
+@page {
+  size: A4;
+  margin: 18mm 16mm 18mm 16mm;
+}

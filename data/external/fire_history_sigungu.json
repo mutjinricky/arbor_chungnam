@@ -1,0 +1,34 @@
+{
+  "_summary": "충남 시도 단위 10년 평균 (43건/년, 284.16ha/년) - 모든 시군에 공통 적용",
+  "fetched_at": "2026-05-23T00:00:00.000Z",
+  "source": "KOSIS 국가통계포털 - 시도별 산불발생 현황 (산림청 산불통계)",
+  "source_url": "https://kosis.kr/statHtml/statHtml.do?orgId=136&tblId=DT_136N_010002",
+  "note": "산림청 산불발생통계 OpenAPI 응답 불가 상태에서 KOSIS 시도 단위 공식 통계로 대체. 충남 시도 평균을 15개 시군에 공통 적용. 산림청 통계연보의 시군별 데이터 연계 시 시군별 차별화 가능.",
+  "granularity": "sido",
+  "reference_year": "2025",
+  "average_period": "2016-2025 (10년)",
+  "chungnam_totals": {
+    "count_2025": 57,
+    "area_2025_ha": 14.02,
+    "count_10yr_avg": 43.0,
+    "area_10yr_avg_ha": 284.16
+  },
+  "score_formula": "frequency_score*0.6 + area_score*0.4 (frequency: 100건/년=100점, area: 1000ha/년=100점)",
+  "by_sigun": {
+    "천안시": { "score": 37, "count_yr": 43.0, "area_ha_yr": 284.16, "source": "충남 시도 평균" },
+    "공주시": { "score": 37, "count_yr": 43.0, "area_ha_yr": 284.16, "source": "충남 시도 평균" },
+    "보령시": { "score": 37, "count_yr": 43.0, "area_ha_yr": 284.16, "source": "충남 시도 평균" },
+    "아산시": { "score": 37, "count_yr": 43.0, "area_ha_yr": 284.16, "source": "충남 시도 평균" },
+    "서산시": { "score": 37, "count_yr": 43.0, "area_ha_yr": 284.16, "source": "충남 시도 평균" },
+    "논산시": { "score": 37, "count_yr": 43.0, "area_ha_yr": 284.16, "source": "충남 시도 평균" },
+    "계룡시": { "score": 37, "count_yr": 43.0, "area_ha_yr": 284.16, "source": "충남 시도 평균" },
+    "당진시": { "score": 37, "count_yr": 43.0, "area_ha_yr": 284.16, "source": "충남 시도 평균" },
+    "금산군": { "score": 37, "count_yr": 43.0, "area_ha_yr": 284.16, "source": "충남 시도 평균" },
+    "부여군": { "score": 37, "count_yr": 43.0, "area_ha_yr": 284.16, "source": "충남 시도 평균" },
+    "서천군": { "score": 37, "count_yr": 43.0, "area_ha_yr": 284.16, "source": "충남 시도 평균" },
+    "청양군": { "score": 37, "count_yr": 43.0, "area_ha_yr": 284.16, "source": "충남 시도 평균" },
+    "홍성군": { "score": 37, "count_yr": 43.0, "area_ha_yr": 284.16, "source": "충남 시도 평균" },
+    "예산군": { "score": 37, "count_yr": 43.0, "area_ha_yr": 284.16, "source": "충남 시도 평균" },
+    "태안군": { "score": 37, "count_yr": 43.0, "area_ha_yr": 284.16, "source": "충남 시도 평균" }
+  }
+}

@@ -1,0 +1,31 @@
+# 의존성
+node_modules/
+
+# 빌드 산출물
+dist/
+build/
+
+# 환경 변수 (API 키 포함 — 절대 커밋 금지)
+.env
+.env.local
+.env.*.local
+
+# 원본 공공데이터 CSV (대용량, 재다운로드 가능)
+data/raw/
+
+# 임시 파일
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 테스트 스크립트 임시
+_*.mjs
+test.html
+page*.html

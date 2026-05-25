@@ -1,0 +1,141 @@
+{
+  "_summary": "14/15개 시군 (20260523 2000 발표 기준)",
+  "fetched_at": "2026-05-23T11:27:35.918Z",
+  "source": "기상청 단기예보 조회서비스",
+  "api_url": "https://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getVilageFcst",
+  "base_date": "20260523",
+  "base_time": "2000",
+  "by_sigun": {
+    "천안시": {
+      "nx": 63,
+      "ny": 110,
+      "maxTemp": 29,
+      "minHumidity": 45,
+      "maxWind": 4.4,
+      "totalRain": 30.8,
+      "score": 20
+    },
+    "공주시": {
+      "nx": 60,
+      "ny": 103,
+      "maxTemp": 29,
+      "minHumidity": 50,
+      "maxWind": 4.4,
+      "totalRain": 25.000000000000004,
+      "score": 20
+    },
+    "보령시": {
+      "nx": 54,
+      "ny": 100,
+      "maxTemp": 26,
+      "minHumidity": 65,
+      "maxWind": 4.7,
+      "totalRain": 28.199999999999996,
+      "score": 0
+    },
+    "아산시": {
+      "nx": 60,
+      "ny": 110,
+      "maxTemp": 29,
+      "minHumidity": 40,
+      "maxWind": 3.7,
+      "totalRain": 27.6,
+      "score": 31
+    },
+    "서산시": {
+      "nx": 51,
+      "ny": 110,
+      "maxTemp": 28,
+      "minHumidity": 50,
+      "maxWind": 5.1,
+      "totalRain": 37.800000000000004,
+      "score": 31
+    },
+    "논산시": {
+      "nx": 58,
+      "ny": 99,
+      "maxTemp": 29,
+      "minHumidity": 45,
+      "maxWind": 4.5,
+      "totalRain": 25.899999999999995,
+      "score": 20
+    },
+    "계룡시": {
+      "nx": 65,
+      "ny": 103,
+      "maxTemp": 29,
+      "minHumidity": 45,
+      "maxWind": 4.5,
+      "totalRain": 28.200000000000003,
+      "score": 20
+    },
+    "당진시": {
+      "nx": 54,
+      "ny": 112,
+      "maxTemp": 29,
+      "minHumidity": 50,
+      "maxWind": 4.9,
+      "totalRain": 40.600000000000016,
+      "score": 20
+    },
+    "금산군": {
+      "nx": 69,
+      "ny": 100,
+      "maxTemp": 28,
+      "minHumidity": 45,
+      "maxWind": 4.5,
+      "totalRain": 36.5,
+      "score": 20
+    },
+    "부여군": {
+      "nx": 55,
+      "ny": 99,
+      "maxTemp": 27,
+      "minHumidity": 55,
+      "maxWind": 4.5,
+      "totalRain": 24.799999999999994,
+      "score": 9
+    },
+    "서천군": {
+      "nx": 55,
+      "ny": 94,
+      "maxTemp": 28,
+      "minHumidity": 55,
+      "maxWind": 4.9,
+      "totalRain": 29.599999999999998,
+      "score": 9
+    },
+    "청양군": {
+      "nx": 57,
+      "ny": 103,
+      "maxTemp": 28,
+      "minHumidity": 45,
+      "maxWind": 4.4,
+      "totalRain": 25.900000000000002,
+      "score": 20
+    },
+    "홍성군": {
+      "nx": 55,
+      "ny": 106,
+      "error": "HTTP 429"
+    },
+    "예산군": {
+      "nx": 58,
+      "ny": 107,
+      "maxTemp": 29,
+      "minHumidity": 45,
+      "maxWind": 3.8,
+      "totalRain": 28.299999999999997,
+      "score": 20
+    },
+    "태안군": {
+      "nx": 48,
+      "ny": 109,
+      "maxTemp": 28,
+      "minHumidity": 60,
+      "maxWind": 4.8,
+      "totalRain": 31.1,
+      "score": 9
+    }
+  }
+}
