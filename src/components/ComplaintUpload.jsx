@@ -128,9 +128,23 @@ export default function ComplaintUpload({ sites, onClose, onIngested }) {
 
           <div className="rounded-md border border-slate-100 bg-slate-50 px-3 py-2 text-[11px] leading-relaxed text-slate-500">
             지원 컬럼 예시: <br />
-            <code>시군, 주소(또는 위도/경도), 민원ID, 접수일자, 민원유형, 처리상태, 내용</code><br />
-            <br />
-            시연 샘플: <code className="rounded bg-white px-1.5 py-0.5">public_data/sample_complaints_saeol.csv</code> (충남 15개 시군 30건)
+            <code>시군, 주소(또는 위도/경도), 민원ID, 접수일자, 민원유형, 처리상태, 내용</code>
+          </div>
+
+          <div className="rounded-md border border-amber-200 bg-amber-50/50 px-3 py-2 text-[11px] text-slate-700">
+            <div className="mb-1 font-semibold text-amber-800">
+              🧪 시연용 샘플
+            </div>
+            <a
+              href="/samples/demo_complaints_chungnam.csv"
+              download
+              className="inline-flex items-center gap-1 text-amber-800 hover:underline"
+            >
+              📥 demo_complaints_chungnam.csv
+            </a>
+            <span className="ml-1.5 text-slate-500">
+              — 50건, 충남 15개 시군 (사직동·곡교천 누적 효과 시연)
+            </span>
           </div>
         </div>
 

@@ -116,6 +116,22 @@ export default function CsvUpload({ onClose, onIngested }) {
             ② 충청남도 가로수길정보표준데이터 (가로수길명/시군구/위도/경도 등)<br />
             ③ 전국도시공원정보표준데이터 (공원명/소재지/공원유형 등)
           </div>
+
+          <div className="rounded-md border border-forest-200 bg-forest-50/40 px-3 py-2 text-[11px] text-slate-700">
+            <div className="mb-1 font-semibold text-forest-800">
+              🧪 시연용 샘플
+            </div>
+            <a
+              href="/samples/demo_streets_chungnam.csv"
+              download
+              className="inline-flex items-center gap-1 text-forest-700 hover:underline"
+            >
+              📥 demo_streets_chungnam.csv
+            </a>
+            <span className="ml-1.5 text-slate-500">
+              — 충남 12개 가로수길 (곡교천 은행나무길 등)
+            </span>
+          </div>
         </div>
 
         <div className="flex items-center justify-end gap-2 border-t border-slate-200 bg-slate-50 px-5 py-3">

@@ -47,6 +47,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 const ROOT = path.resolve(__dirname, '..')
 const RAW_DIR = path.join(ROOT, 'data', 'raw')
+const SOURCE_DIR = path.join(ROOT, 'data', 'source-csv')
 const OUT_FILE = path.join(ROOT, 'src', 'data', 'sites_real.json')
 
 // 충남 대략 경계 — 원본 CSV에 위경도가 잘못 입력된 사이트(강원·경북 등 범위 밖)는
@@ -484,25 +485,40 @@ function riskSources(site) {
 }
 
 function main() {
-  if (!fs.existsSync(RAW_DIR)) {
-    console.error(`data/raw 폴더가 없습니다: ${RAW_DIR}`)
+  // data/raw/ (사용자 추가용, gitignored) + data/source-csv/ (저장소 커밋, 재현용) 둘 다 스캔
+  const sources = []
+  for (const dir of [SOURCE_DIR, RAW_DIR]) {
+    if (!fs.existsSync(dir)) continue
+    for (const f of fs.readdirSync(dir)) {
+      if (!/\.csv$/i.test(f)) continue
+      sources.push({ dir, file: f })
+    }
+  }
+  if (sources.length === 0) {
+    console.error(
+      `CSV 없음 — data/source-csv 또는 data/raw 폴더에 충남 공공데이터 CSV를 두세요.`
+    )
     process.exit(1)
   }
-  // 최신 파일이 먼저 처리되도록 mtime 내림차순 (통합본 vs 개별 시군 중복 시 최신 우선)
-  // 단, 개별 시군 파일이 통합본보다 항상 우선되도록 파일명에 "_시군명_"이 있으면 앞으로
-  const files = fs
-    .readdirSync(RAW_DIR)
-    .filter((f) => /\.csv$/i.test(f))
-    .sort((a, b) => {
-      const aIndividual = /_(?:시|군)_|시_|군_/.test(a) ? 0 : 1
-      const bIndividual = /_(?:시|군)_|시_|군_/.test(b) ? 0 : 1
-      if (aIndividual !== bIndividual) return aIndividual - bIndividual
-      return b.localeCompare(a) // 파일명 역순 (대체로 최신 날짜가 뒤)
-    })
-  if (files.length === 0) {
-    console.error('data/raw 안에 CSV가 없습니다.')
-    process.exit(1)
+  // 동일 파일명이 양 폴더에 있으면 data/raw (사용자 최신본) 우선
+  const seenName = new Set()
+  const dedupedSources = []
+  // raw 폴더부터 먼저 (사용자 최신 파일 우선권)
+  sources.sort((a, b) => (a.dir === RAW_DIR ? -1 : 1))
+  for (const s of sources) {
+    if (seenName.has(s.file)) continue
+    seenName.add(s.file)
+    dedupedSources.push(s)
   }
+  // 개별 시군 파일이 통합본보다 먼저 처리되도록 정렬
+  dedupedSources.sort((a, b) => {
+    const aInd = /_(?:시|군)_|시_|군_/.test(a.file) ? 0 : 1
+    const bInd = /_(?:시|군)_|시_|군_/.test(b.file) ? 0 : 1
+    if (aInd !== bInd) return aInd - bInd
+    return b.file.localeCompare(a.file)
+  })
+  const files = dedupedSources.map((s) => s.file)
+  const fileDirMap = new Map(dedupedSources.map((s) => [s.file, s.dir]))
 
   const out = []
   const seenKey = new Set()
@@ -511,7 +527,7 @@ function main() {
   const counts = {}
 
   for (const file of files) {
-    const full = path.join(RAW_DIR, file)
+    const full = path.join(fileDirMap.get(file) || RAW_DIR, file)
     let rows
     try {
       rows = readCsvAuto(full)
